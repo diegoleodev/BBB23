@@ -7,7 +7,7 @@
         <title>BBB</title>
 
         <style>
-            *{
+              *{
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
@@ -17,7 +17,6 @@
             body{
                 width: 100%;
                 height: 95vh;
-
                 background-color: black;
                 color: aliceblue;
                 font-family:'Courier New', Courier, monospace;
@@ -30,6 +29,8 @@
             }
 
             .container{
+                width: 100%;
+                height: 100%;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -67,11 +68,20 @@
             }
 
             @media only screen and (max-width: 600px) {
-                iframe {
+                body{
                     width: 100%;
+                }
+                .container{
+                    width: 100%;
+            
+                }
+                iframe {
+                    width: 100vw;
                     height: auto;
                 }
               }
+
+            
         </style>
     </head>
     <body>
@@ -79,7 +89,7 @@
         <h1>BBB 23</h1>
         <div>
             <iframe 
-                name=Player "" src="https://sinalpublico.com/player3/ch.php?canal=bbb23s01" >
+                name=Player "" src="https://sinalpublico.com/player3/ch.php?canal=bbb23s01" allowFullScreen >
             </iframe>    
         </div>
 
@@ -95,10 +105,10 @@
             cam = document.querySelector("iframe")
             
             function mudaCam02(){
-                document.querySelector('iframe').src = "https://sinalpublico.com/player3/ch.php?canal=bbb23s02";
+                document.querySelector('iframe').src = "https://sinalpublico.com/player3/ch.php?canal=bbb23s02 allowFullScreen";
             }
             function mudaCam01(){
-                document.querySelector('iframe').src = "https://sinalpublico.com/player3/ch.php?canal=bbb23s01";
+                document.querySelector('iframe').src = "https://sinalpublico.com/player3/ch.php?canal=bbb23s01 allowFullScreen";
             }
 
 
