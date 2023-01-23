@@ -7,7 +7,7 @@
         <title>BBB</title>
 
         <style>
-              *{
+            *{
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
@@ -17,7 +17,6 @@
             body{
                 width: 100%;
                 height: 95vh;
-                background-color: black;
                 color: aliceblue;
                 font-family:'Courier New', Courier, monospace;
                 display: flex;
@@ -26,6 +25,7 @@
                 flex-direction: column;
                 
                 
+                background-image: radial-gradient(circle at -20.44% 56.16%, #c2f800 0, #fffb00 5.56%, #fce808 11.11%, #d2bd6a 16.67%, #d8b462 22.22%, #dcab5b 27.78%, #e0a055 33.33%, #e2944f 38.89%, #e4874b 44.44%, #e57848 50%, #e56848 55.56%, #e5584a 61.11%, #e4484f 66.67%, #e23757 72.22%, #df2660 77.78%, #da126a 83.33%, #d50076 88.89%, #cd0083 94.44%, #c40291 100%);
             }
 
             .container{
@@ -40,26 +40,36 @@
                 font-size: 40px;
             }
 
+            div p{
+                text-align: center;
+                padding-top: 5px ;
+                font-size: 25px;
+                font-weight: 500;
+            }
 
             iframe{
                 width: 600px;
-                height: 400px;
+                height: 340px;
                 border: none;
                 
             }
 
+            .btn {
+                
+            }
 
             button{
                 width: 100px;
                 height: 40px;
                 margin-left: 10px;
                 border: none;
-                background-color: black;
                 color: aliceblue;
                 border: 1px solid white;
                 border-radius: 7px;
                 font-family:'Courier New', Courier, monospace;
                 transition: 0.5s;
+                background-color: transparent;
+                font-weight: 600;
             }
 
             button:hover{
@@ -77,11 +87,14 @@
                 }
                 iframe {
                     width: 100vw;
-                    height: 400px;
+                    height: 282px;
                 }
               }
 
-            
+
+
+
+
         </style>
     </head>
     <body>
@@ -89,8 +102,9 @@
         <h1>BBB 23</h1>
         <div>
             <iframe 
-                name=Player "" src="https://sinalpublico.com/player3/ch.php?canal=bbb23s01" allowFullScreen >
-            </iframe>    
+                name=Player "" src="https://sinalpublico.com/player3/ch.php?canal=bbb23s01" allowFullScreen>
+            </iframe>
+            <p>Camera 01</p>    
         </div>
 
         <div class="btn">
@@ -103,13 +117,19 @@
         <script>
             
             cam = document.querySelector("iframe")
+
+            
             
             function mudaCam02(){
-                document.querySelector('iframe').src = "https://sinalpublico.com/player3/ch.php?canal=bbb23s02 ";
+                document.querySelector('iframe').src = "https://sinalpublico.com/player3/ch.php?canal=bbb23s02 allowFullScreen";
+                document.querySelector('p').innerHTML = "Camera 02"
             }
             function mudaCam01(){
-                document.querySelector('iframe').src = "https://sinalpublico.com/player3/ch.php?canal=bbb23s01 ";
+                document.querySelector('iframe').src = "https://sinalpublico.com/player3/ch.php?canal=bbb23s01 allowFullScreen";
+                document.querySelector('p').innerHTML = "Camera 01"
             }
+
+
 
 
         </script>
